@@ -56,18 +56,7 @@ export class Launcher extends search.Search {
             this.options.splice(0)
 
             if (pattern.length == 0) {
-                exec("xdg-open https://www.google.com/search?q=test", (error, stdout, stderr) => {
-                    if (error) {
-                        global.log(`error: ${error.message}`);
-                        return;
-                    }
-                    if (stderr) {
-                        global.log(`stderr: ${stderr}`);
-                        return;
-                    }
-                    global.log(`stdout: ${stdout}`);
-                });
-                
+                exec("xdg-open https://www.google.com/search?q=test")
                 
                 this.list_workspace(ext);
                 return this.options
