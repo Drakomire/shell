@@ -244,7 +244,7 @@ export namespace Plugin {
 
     export function start(plugin: Plugin.External): null | utils.AsyncIPC {
 //         return utils.async_process_ipc([plugin.cmd])
-           _failsafe = plugin.cmd
+           let _failsafe = plugin.cmd
            return null
     }
 }
