@@ -32,15 +32,15 @@ export abstract class Builtin {
     /** Dispatches a launcher request, and stores the response */
     handle(ext: Ext, event: Request.Request) {
         switch (event.event) {
-//             case "complete":
-//                 this.last_response = { event: "noop" }
-//                 break
-//             case "query":
-//                 this.last_response = this.query(ext, event.value)
-//                 break
-//             case "submit":
-//                 this.last_response = this.submit(ext, event.id)
-//                 break
+            case "complete":
+                this.last_response = { event: "noop" }
+                break
+            case "query":
+                this.last_response = this.query(ext, event.value)
+                break
+            case "submit":
+                this.last_response = this.submit(ext, event.id)
+                break
             default:
                 this.last_response = { event: "noop" }
 
@@ -243,6 +243,6 @@ export namespace Plugin {
     }
 
     export function start(plugin: Plugin.External): null | utils.AsyncIPC {
-        return utils.async_process_ipc([plugin.cmd])
+//         return utils.async_process_ipc([plugin.cmd])
     }
 }
