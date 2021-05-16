@@ -22,8 +22,6 @@ const { OK } = result;
 const HOME_DIR: string = GLib.get_home_dir();
 const DATA_DIRS: string = GLib.get_system_data_dirs();
 
-const { exec } = require("child_process");
-
 /// Search paths for finding applications
 const SEARCH_PATHS: Array<[string, string]> = [
     // System-wide
@@ -56,8 +54,6 @@ export class Launcher extends search.Search {
             this.options.splice(0)
 
             if (pattern.length == 0) {
-                exec("xdg-open https://www.google.com/search?q=test")
-                
                 this.list_workspace(ext);
                 return this.options
             }
