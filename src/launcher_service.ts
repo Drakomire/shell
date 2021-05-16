@@ -125,7 +125,6 @@ export class LauncherService {
     }
 
     private *match_query(ext: Ext, query: string): IterableIterator<PluginType.Source> {
-        query = "spotify"
         for (const plugin of BUILTINS) {
             if (!plugin.pattern || plugin.pattern.test(query)) {
                 yield plugin
@@ -256,8 +255,8 @@ export class SearchOption {
             info_box.add_child(new St.Label({ text: description, style: "font-size: small" }))
         }
 
-        layout.add_child(info_box)
-        layout.add_child(this.shortcut)
+//         layout.add_child(info_box)
+//         layout.add_child(this.shortcut)
 
         this.widget = new St.Button({ style_class: "pop-shell-search-element" });
         (this.widget as any).add_actor(layout)
