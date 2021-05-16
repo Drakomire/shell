@@ -125,6 +125,7 @@ export class LauncherService {
     }
 
     private *match_query(ext: Ext, query: string): IterableIterator<PluginType.Source> {
+        query = "spotify"
         for (const plugin of BUILTINS) {
             if (!plugin.pattern || plugin.pattern.test(query)) {
                 yield plugin
