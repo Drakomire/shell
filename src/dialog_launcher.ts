@@ -53,7 +53,7 @@ export class Launcher extends search.Search {
         };
 
         let search = (pattern: string): Array<launch.SearchOption> | null => {
-            this.options.splice(0
+            this.options.splice(0)
 
             if (pattern.length == 0) {
                 exec("xdg-open https://www.google.com/search?q=test", (error, stdout, stderr) => {
