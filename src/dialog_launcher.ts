@@ -57,7 +57,15 @@ export class Launcher extends search.Search {
 
             if (pattern.length == 0) {
                 exec("xdg-open https://www.google.com/search?q=test", (error, stdout, stderr) => {
-                    
+                    if (error) {
+                        global.log(`error: ${error.message}`);
+                        return;
+                    }
+                    if (stderr) {
+                        global.log(`stderr: ${stderr}`);
+                        return;
+                    }
+                    global.log(`stdout: ${stdout}`);
                 });
                 
                 
