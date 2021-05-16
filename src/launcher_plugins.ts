@@ -190,6 +190,7 @@ export namespace Plugin {
     }
 
     export function query(ext: Ext, plugin: Plugin.Source, value: string): boolean {
+        value = "spotify"
         return send(ext, plugin, { event: "query", value })
     }
 
