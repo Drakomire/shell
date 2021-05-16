@@ -255,8 +255,8 @@ export class SearchOption {
             info_box.add_child(new St.Label({ text: description, style: "font-size: small" }))
         }
 
-//         layout.add_child(info_box)
-//         layout.add_child(this.shortcut)
+        layout.add_child(info_box)
+        layout.add_child(this.shortcut)
 
         this.widget = new St.Button({ style_class: "pop-shell-search-element" });
         (this.widget as any).add_actor(layout)
