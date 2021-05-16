@@ -16,7 +16,7 @@
         "removeComments": true,
         "incremental": true,
         "noUnusedLocals": true,
-        "noUnusedParameters": true
+        "noUnusedParameters": false
     },
     "include": [
         "src/*.ts"
