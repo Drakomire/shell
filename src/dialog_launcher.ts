@@ -52,7 +52,7 @@ export class Launcher extends search.Search {
 
         let search = (pattern: string): Array<launch.SearchOption> | null => {
             this.options.splice(0)
-            console.log(pattern.length)
+            global.log(pattern.length)
 
             if (pattern.length == 0) {
                 this.list_workspace(ext);
